@@ -15,5 +15,9 @@ setup(
       packages=[
             'my_custom_sklearn_transforms'
       ],
-      zip_safe=False
+      zip_safe=False,
+      install_requires = [
+            'imbalanced-learn==0.4.3',
+            'xgboost==0.82',
+      ]
 )

@@ -46,7 +46,7 @@ class MinMax_Notes(BaseEstimator, TransformerMixin):
         
         min_max_scaler = preprocessing.MinMaxScaler(feature_range=(0, 10))
         X_minmax = min_max_scaler.fit_transform(X[self.notes].values)
-        scaled_features_df = pd.DataFrame(X_minmax, index=X.index, columns=self.notes)
+        scaled_features_df = pd.DataFrame(X_minmax, columns=self.notes)
 
         X = pd.concat([X[self.other_features], scaled_features_df], axis=1)
 
